@@ -12,6 +12,10 @@
 
 This is the official code of the [paper](https://arxiv.org/abs/2507.20230) "A Multi-Agent System Enables Versatile Information Extraction from the Chemical Literature".
 
+> **Fork UI:** This fork includes a new shadcn-based Next.js extraction
+> workspace in [`web/`](web/README.md). It connects to the published ChemEAGLE
+> API while keeping API credentials on the server.
+
 
 
 ## :sparkles: Highlights
@@ -347,5 +351,4 @@ The input can be any chemical graphics; feel free to try more examples!
 ## :warning: Acknowledgement
 1. We use api_version="2024-10-21" with the HKUST Azure OpenAI endpoint as our official closed-source version.
 2. Our code is based on [MolNexTR](https://github.com/CYF2000127/MolNexTR), [MolScribe](https://github.com/thomas0809/MolScribe), [RxnIM](https://github.com/CYF2000127/RxnIM), [RxnScribe](https://github.com/thomas0809/RxNScribe), [ChemNER](https://github.com/Ozymandias314/ChemIENER), [ChemRxnExtractor](https://github.com/jiangfeng1124/ChemRxnExtractor), [AutoAgents](https://github.com/Link-AGI/AutoAgents), and [Azure OpenAI](https://azure.microsoft.com/).
-
 
