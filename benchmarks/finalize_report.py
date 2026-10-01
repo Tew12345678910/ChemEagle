@@ -188,6 +188,9 @@ repeats the API runs; `benchmarks/report_efficient.py` repeats the scoring;
     shutil.copyfile(root / "benchmark-runs/full-gemini-default/models.json", reports / "hkust_model_catalog_2026-10-01.json")
     for name in ["probe_live", "full-gemini-default-live", "selective-review-live", "kimi-low-probe-incomplete"]:
         (reports / (name + ".json")).unlink(missing_ok=True)
+    if (root / "reports/version_comparison.json").exists():
+        from write_version_comparison import main as write_version_report
+        write_version_report()
     print("Report and prediction artifacts saved")
 
 

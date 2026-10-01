@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+\title{ChemEAGLE: GitHub, all-cloud and cost-optimized comparison}
+\author{}
+\date{1 October 2026}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+This report compares the original GitHub-style hybrid pipeline, the current all-cloud Worker implementation, and the optimized cloud-model pipeline on 73 R-group figures containing 893 labelled reactions. A separate Sol-only experiment is included to correct the provenance of the earlier report.
+
+\section{What the versions mean}
+
+\textbf{1. GitHub hybrid.} The reference repository combines LLM planning and extraction agents with local specialist tools, including RxnIM, MolNexTR, OCR and chemical recognition checkpoints. A cloud-hosted LLM does not make this an all-cloud implementation: the specialist models still run on the host GPU. Your fork's main commit is \texttt{54276de}; the current author repository is \texttt{6fea3e1}. The author repository now defaults to Gemini 3.7 Flash through its shared client, while retaining the specialist pipeline.
+
+\textbf{2. All-cloud Worker.} \texttt{ChemEagle-Cloud} commit \texttt{88ebf7a} implements an image-only Worker using one model extraction request followed by a second image-grounded validation request. It contains no Torch, RDKit, RxnIM, MolNexTR or local model weights. The web interface defaults to Gemini 3.7 Flash. Its prompts and parser were benchmarked unchanged, with validation enabled and original PNG bytes, directly against HKUST. This tests the extraction algorithm; it does not measure the deployed Worker or web application's latency.
+
+\textbf{3. Cloud models with cost optimization.} The optimized variant sends one bounded-resolution image to Gemini 3.7 Flash, runs deterministic RDKit checks, and requests GPT-5.6 Sol high visual review only when flagged. It also caches clean results. All model inference is remote, but RDKit validation and orchestration run on a CPU host. This variant is not yet a deployment of the pure Cloudflare Worker and has not been integrated into its web interface.
+
+\section{Three-version benchmark}
+
+\begingroup\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}@{}}
+\toprule
+Version & Success & F1 & Exact F1 & Mean time (s) & Reference cost \\
+\midrule
+\endhead
+GitHub-style hybrid, historical compatibility run & 69/\allowbreak{}73 & 0.600 & 0.564 & 286.3 & Unavailable \\
+Current all-cloud Worker, Gemini two-pass & 73/\allowbreak{}73 & 0.759 & 0.673 & 59.1 & USD 2.860 \\
+Cloud models with selective Sol review & 73/\allowbreak{}73 & 0.820 & 0.818 & 39.4 & USD 1.926 \\
+\bottomrule
+\end{longtable}
+\endgroup
+
+Precision /\allowbreak{} recall were \textbf{0.661 /\allowbreak{} 0.550} for the historical hybrid, \textbf{0.766 /\allowbreak{} 0.753} for the current cloud Worker, and \textbf{0.817 /\allowbreak{} 0.823} for the optimized variant. F1 is a precision/\allowbreak{}recall measure; it is not the percentage of fully correct images.
+
+The GitHub-style result is a historical compatibility benchmark from 10-11 September, rescored with today's evaluator. It used the normal hybrid source on an SSH host with RTX 3090 GPUs, but a benchmark shim replaced unavailable GPT-4o calls with GPT-5 Mini and removed unsupported sampling parameters. Four images failed. Therefore, F1 0.600 is \textbf{not an exact benchmark of the published GPT-4o configuration}, and is not a run of the author's latest Gemini-default commit. No valid token-cost record exists for it; GPU, host and external-service costs are also unavailable. Do not interpret this row as the paper's published accuracy.
+
+The current cloud Worker was freshly benchmarked on 1 October, using its pinned payload builders and output normalizer. The optimized results are the completed 1 October run. All three rows cover the same 73 images and ground truth. They differ in prompts, model choice, image resolution and execution environment, so the table compares whole configurations rather than isolating the effect of hosting alone.
+
+\section{Correction to the earlier saved baseline}
+
+The earlier report called F1 0.815 the saved ChemEagle baseline. Its provenance is a \textbf{standalone all-cloud Sol experiment}, not the original GitHub specialist pipeline and not the current Cloud Worker's Gemini implementation. The experiment used GPT-5.6 Sol medium extraction followed by Sol high review of the full image plus three overlapping crops, with a row-count fallback gate. It was run on 21 September and rescored today.
+
+\begingroup\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.34\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}@{}}
+\toprule
+Configuration & F1 & Exact F1 & Mean time (s) & Reference cost \\
+\midrule
+\endhead
+Saved all-cloud Sol medium + high review & 0.815 & 0.804 & 157.8 & USD 9.159 \\
+Optimized Gemini + selective Sol review & 0.820 & 0.818 & 39.4 & USD 1.926 \\
+\bottomrule
+\end{longtable}
+\endgroup
+
+The \textbf{79.0\% estimated token-cost saving} refers specifically to this Sol experiment. The corresponding latency reduction is 75.0\%. It should not be quoted as a measured saving against the original GitHub version.
+
+Compared with the current Gemini two-pass Cloud Worker, the optimized variant changes reference cost by \textbf{-32.7\%}, mean latency by \textbf{-33.2\%}, and F1 by \textbf{+0.061}. Negative percentages mean lower cost or latency. These are single-run observations, not controlled estimates of causal effects.
+
+\section{Why the optimized configuration differs}
+
+The Sol experiment made 146 model calls for 73 images. The optimized variant needed 73 Flash extraction calls and five Sol reviews: 78 calls in total. Local checks flagged invalid SMILES, wildcard atoms, empty outputs and duplicate rows. Accepted reviews preserved row counts and row identities and did not increase invalid structures or duplicates.
+
+The optimized result contained zero invalid SMILES among 2,543 molecular entries, compared with six invalid entries in the saved Sol experiment. Syntax validity does not establish agreement with the chemical drawing. The current cloud Worker had 136 invalid or missing SMILES entries and the historical GitHub-compatible run had 67, using the same local scoring-time validator.
+
+Caching was verified with a live smoke test: the first identical input made one paid model call, and the second made zero. Cache keys include image contents, prompt, model, reasoning, resolution and review policy. The reported benchmark prices describe cold extraction, not repeated cache hits.
+
+\section{Other models and settings}
+
+\begingroup\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}@{}}
+\toprule
+Configuration & Success & F1 & Exact F1 & Mean time (s) & Reference cost \\
+\midrule
+\endhead
+Gemini 3.7 Flash, default reasoning & 73/\allowbreak{}73 & 0.795 & 0.766 & 32.4 & USD 1.466 \\
+Gemini 3.7 Flash, low reasoning & 73/\allowbreak{}73 & 0.777 & 0.692 & 24.0 & USD 0.934 \\
+Kimi K3, reasoning off & 73/\allowbreak{}73 & 0.265 & 0.229 & 27.2 & USD 0.888 \\
+Qwen 3.8 Flash service, reasoning off & 72/\allowbreak{}73 & 0.169 & 0.132 & 19.3 & USD 0.074 \\
+MiniMax M3, reasoning off & 70/\allowbreak{}73 & 0.113 & 0.055 & 49.5 & USD 0.130 \\
+\bottomrule
+\end{longtable}
+\endgroup
+
+These are separate direct image-to-SMILES configurations using the optimized extraction prompt, not replacements tested inside the original GitHub specialist pipeline or the current Cloud Worker. The inexpensive Kimi and MiniMax open-weight routes lost substantial accuracy; Qwen Flash was also tested, but its weight availability was not verified. Low price alone does not support replacing ChemEagle with these direct-conversion configurations.
+
+\section{Measurement limits}
+
+GT4 contains 78 rows, but only 73 matching images are available. The sole existing colon-to-underscore filename mismatch was normalized. Failed responses contribute zero predictions while retaining their ground truth in recall. Conditions, PDF segmentation and document-level extraction are outside the scored task.
+
+Benchmark F1 uses the existing 0.5 reactant/\allowbreak{}product overlap rule. Exact F1 requires complete matching reactant and product multisets. Both canonicalize SMILES, strip stereochemistry and retain the largest salt fragment. Exact F1 therefore does not certify exact stereochemistry or complete salt identity.
+
+USD figures reprice measured token usage with the same 1 October OpenRouter catalog. They are reference estimates, not HKUST invoices, and include reported reasoning tokens. Unknown token usage cannot be reconstructed. Latency is observed per-image extraction time under each run's workload; sums are not elapsed batch duration. GPU hosting and infrastructure costs are excluded.
+
+The optimized images were bounded to 1,800 pixels on the longest side; the current Cloud Worker benchmark used original PNGs. The selective-review policy was developed on a 12-image subset reused in the full benchmark. The small F1 gain over Sol does not establish statistical superiority, and no independent held-out dataset has been evaluated.
+
+All new model inference calls used the HKUST chat-completions endpoint. OpenRouter supplied public pricing only. GPT-6 Sol and GPT-6.1 Sol were absent from the HKUST catalog checked on 1 October and were not benchmarked. Yufan's email has not been verified.
+
+\section{Recommendation}
+
+For this R-group workload, use Gemini default reasoning with selective Sol review when comparable quality to the Sol experiment is required at lower estimated cost. Retain the original specialist pipeline for tasks outside the tested scope. Validate the optimized variant on independent images, including stereochemistry and salts, before making it the production default. Integrating the CPU validator into the deployed cloud service is a separate step.
+
+\section{Code references}
+
+\begin{itemize}
+\item \href{https://github.com/Tew12345678910/ChemEagle/tree/54276de6a7d3210e4f4d42f605cb6b17bfd5d1ba}{Your GitHub reference fork, commit 54276de}.
+\item \href{https://github.com/CYF2000127/ChemEagle/tree/6fea3e1f1fcb54803471522b3327c6ef15a88063}{Author's current GitHub implementation, commit 6fea3e1}.
+\item \href{https://github.com/Tew12345678910/ChemEagle-Cloud/tree/88ebf7a2080a4ab3ab22c7101cf67e9c1de407e1/cloud_worker}{All-cloud Worker, commit 88ebf7a}.
+\item \href{https://github.com/Tew12345678910/ChemEagle/tree/mathus/chemeagle-cost-optimized}{Cost-optimized branch}.
+\item \href{https://openrouter.ai/api/v1/models}{Common reference pricing catalog}, snapshot dated 1 October 2026.
+\end{itemize}
+\end{document}

@@ -56,6 +56,13 @@ class EfficiencyTests(unittest.TestCase):
         self.assertTrue(validate({"reactions": []})["needs_review"])
         self.assertTrue(validate({"reactions": VALID["reactions"] * 2})["needs_review"])
 
+    def test_cloud_null_and_missing_smiles_are_flagged_without_crashing(self):
+        result = {"reactions": [{"reactants": [{"smiles": None}, {}],
+                                  "products": [{"smiles": ""}]}]}
+        checked = validate(result)
+        self.assertTrue(checked["needs_review"])
+        self.assertEqual(len(checked["invalid_smiles"]), 3)
+
     def test_wildcard_placeholders_cannot_pass_clean_cache_gate(self):
         result = json.loads(json.dumps(VALID))
         result["reactions"][0]["products"][0]["smiles"] = "*CC"

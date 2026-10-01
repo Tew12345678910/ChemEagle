@@ -112,8 +112,8 @@ def validate(result: dict) -> dict:
             canon = []
             for mol in row[side]:
                 count += 1
-                smi = mol["smiles"]
-                parsed = Chem.MolFromSmiles(smi)
+                smi = mol.get("smiles")
+                parsed = Chem.MolFromSmiles(smi) if isinstance(smi, str) and smi.strip() else None
                 if parsed is None:
                     invalid.append({"row": index, "side": side, "smiles": smi})
                 else:
