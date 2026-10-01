@@ -1,0 +1,178 @@
+{
+  "models": {
+    "moonshotai/kimi-k3": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 9.18306599999778,
+      "median_seconds": 9.18306599999778,
+      "prompt_tokens": 2574,
+      "completion_tokens": 580,
+      "reasoning_tokens": 0,
+      "estimated_usd": 0.0075111952,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": 0.007500127,
+      "provider_cost_calls": 1,
+      "estimated_usd_per_image": 0.0075111952,
+      "estimated_usd_per_match": 0.0012518658666666666,
+      "invalid_smiles": 6,
+      "molecules": 24,
+      "flagged_images": 1,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 0,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": true,
+          "invalid_smiles": 6,
+          "latency_seconds": 9.18306599999778
+        }
+      ]
+    },
+    "saved_sol_medium": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 46.646,
+      "median_seconds": 46.646,
+      "prompt_tokens": 1521,
+      "completion_tokens": 2967,
+      "reasoning_tokens": 2560,
+      "estimated_usd": 0.032712000000000005,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": null,
+      "provider_cost_calls": 0,
+      "estimated_usd_per_image": 0.032712000000000005,
+      "estimated_usd_per_match": 0.005452000000000001,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 46.646
+        }
+      ],
+      "historical": true,
+      "date": "2026-09-21"
+    },
+    "saved_sol_medium_high_review": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 78.151,
+      "median_seconds": 78.151,
+      "prompt_tokens": 6552,
+      "completion_tokens": 4987,
+      "reasoning_tokens": 4179,
+      "estimated_usd": 0.062974,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": null,
+      "provider_cost_calls": 0,
+      "estimated_usd_per_image": 0.062974,
+      "estimated_usd_per_match": 0.010495666666666667,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 78.151
+        }
+      ],
+      "historical": true,
+      "date": "2026-09-21"
+    }
+  },
+  "pricing_basis": "2026-10-01 OpenRouter catalog reference rates; HKUST actual charges can differ. Completion totals include reported reasoning tokens; failures/retries with usage are included.",
+  "baseline_note": "Saved predictions rescored on identical images with current RDKit. Baseline review latency and cost include both extraction and review.",
+  "scope": "R-group reactants and products only. Conditions not scored. Soft match strips stereochemistry and salts with threshold 0.5; exact match also strips stereochemistry and salts.",
+  "account_measurement": {
+    "scores": {
+      "moonshotai/kimi-k3": {
+        "backend": "moonshotai/kimi-k3",
+        "status": "completed",
+        "completed_images": 1,
+        "successful_images": 1,
+        "total_seconds": 9.18306599999778,
+        "mean_seconds": 9.18306599999778,
+        "soft_match": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 6,
+          "n_pred": 6,
+          "n_gt": 6
+        },
+        "ged_avg_per_reaction": null
+      }
+    },
+    "balance_before_hkd": 273.029163,
+    "balance_after_hkd": 272.969162,
+    "balance_delta_hkd": 0.06000099999999975,
+    "elapsed_seconds": 10.641114708036184,
+    "cost_note": "Account balance delta; includes concurrent account activity if any. Model attribution requires usage pricing."
+  }
+}

@@ -1,0 +1,434 @@
+{
+  "models": {
+    "gemini-3.1-pro-preview": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334,
+        "tp": 5,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334,
+        "tp": 5,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 6.5116734999464825,
+      "median_seconds": 6.5116734999464825,
+      "prompt_tokens": 1323,
+      "completion_tokens": 480,
+      "reasoning_tokens": 0,
+      "estimated_usd": 0.008406,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": null,
+      "provider_cost_calls": 0,
+      "estimated_usd_per_image": 0.008406,
+      "estimated_usd_per_match": 0.0016812,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 5,
+          "exact_tp": 5,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 6.5116734999464825
+        }
+      ]
+    },
+    "gemini-3.7-flash": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 12.95309825008735,
+      "median_seconds": 12.95309825008735,
+      "prompt_tokens": 1323,
+      "completion_tokens": 1556,
+      "reasoning_tokens": 888,
+      "estimated_usd": 0.00682725,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": null,
+      "provider_cost_calls": 0,
+      "estimated_usd_per_image": 0.00682725,
+      "estimated_usd_per_match": 0.001137875,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 12.95309825008735
+        }
+      ]
+    },
+    "minimax/minimax-m3": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 15.206902125035413,
+      "median_seconds": 15.206902125035413,
+      "prompt_tokens": 955,
+      "completion_tokens": 363,
+      "reasoning_tokens": 0,
+      "estimated_usd": 0.0006913799999999999,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": 0.000638028,
+      "provider_cost_calls": 1,
+      "estimated_usd_per_image": 0.0006913799999999999,
+      "estimated_usd_per_match": 0.00011522999999999998,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 15.206902125035413
+        }
+      ]
+    },
+    "moonshotai/kimi-k3": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 125.92637895804364,
+      "median_seconds": 125.92637895804364,
+      "prompt_tokens": 2642,
+      "completion_tokens": 3790,
+      "reasoning_tokens": 3416,
+      "estimated_usd": 0.0396564016,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": 0.0550596,
+      "provider_cost_calls": 1,
+      "estimated_usd_per_image": 0.0396564016,
+      "estimated_usd_per_match": 0.006609400266666667,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 125.92637895804364
+        }
+      ]
+    },
+    "qwen/qwen3.8-flash": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334,
+        "tp": 5,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334,
+        "tp": 5,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 9.159781540976837,
+      "median_seconds": 9.159781540976837,
+      "prompt_tokens": 1996,
+      "completion_tokens": 652,
+      "reasoning_tokens": 0,
+      "estimated_usd": 0.0006058400000000001,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": 0.00060584,
+      "provider_cost_calls": 1,
+      "estimated_usd_per_image": 0.0006058400000000001,
+      "estimated_usd_per_match": 0.00012116800000000002,
+      "invalid_smiles": 1,
+      "molecules": 12,
+      "flagged_images": 1,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 5,
+          "exact_tp": 5,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": true,
+          "invalid_smiles": 1,
+          "latency_seconds": 9.159781540976837
+        }
+      ]
+    },
+    "saved_sol_medium": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 46.646,
+      "median_seconds": 46.646,
+      "prompt_tokens": 1521,
+      "completion_tokens": 2967,
+      "reasoning_tokens": 2560,
+      "estimated_usd": 0.032712000000000005,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": null,
+      "provider_cost_calls": 0,
+      "estimated_usd_per_image": 0.032712000000000005,
+      "estimated_usd_per_match": 0.005452000000000001,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 46.646
+        }
+      ],
+      "historical": true,
+      "date": "2026-09-21"
+    },
+    "saved_sol_medium_high_review": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 78.151,
+      "median_seconds": 78.151,
+      "prompt_tokens": 6552,
+      "completion_tokens": 4987,
+      "reasoning_tokens": 4179,
+      "estimated_usd": 0.062974,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": null,
+      "provider_cost_calls": 0,
+      "estimated_usd_per_image": 0.062974,
+      "estimated_usd_per_match": 0.010495666666666667,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 78.151
+        }
+      ],
+      "historical": true,
+      "date": "2026-09-21"
+    }
+  },
+  "pricing_basis": "2026-10-01 OpenRouter catalog reference rates; HKUST actual charges can differ. Completion totals include reported reasoning tokens; failures/retries with usage are included.",
+  "baseline_note": "Saved predictions rescored on identical images with current RDKit. Baseline review latency and cost include both extraction and review.",
+  "scope": "R-group reactants and products only. Conditions not scored. Soft match strips stereochemistry and salts with threshold 0.5; exact match also strips stereochemistry and salts.",
+  "account_measurement": {
+    "scores": {
+      "qwen/qwen3.8-flash": {
+        "backend": "qwen/qwen3.8-flash",
+        "status": "completed",
+        "completed_images": 1,
+        "successful_images": 1,
+        "total_seconds": 9.159781540976837,
+        "mean_seconds": 9.159781540976837,
+        "soft_match": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8333333333333334,
+          "f1": 0.8333333333333334,
+          "tp": 5,
+          "n_pred": 6,
+          "n_gt": 6
+        },
+        "ged_avg_per_reaction": null
+      },
+      "moonshotai/kimi-k3": {
+        "backend": "moonshotai/kimi-k3",
+        "status": "completed",
+        "completed_images": 1,
+        "successful_images": 1,
+        "total_seconds": 125.92637895804364,
+        "mean_seconds": 125.92637895804364,
+        "soft_match": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 6,
+          "n_pred": 6,
+          "n_gt": 6
+        },
+        "ged_avg_per_reaction": null
+      },
+      "minimax/minimax-m3": {
+        "backend": "minimax/minimax-m3",
+        "status": "completed",
+        "completed_images": 1,
+        "successful_images": 1,
+        "total_seconds": 15.206902125035413,
+        "mean_seconds": 15.206902125035413,
+        "soft_match": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 6,
+          "n_pred": 6,
+          "n_gt": 6
+        },
+        "ged_avg_per_reaction": null
+      },
+      "gemini-3.7-flash": {
+        "backend": "gemini-3.7-flash",
+        "status": "completed",
+        "completed_images": 1,
+        "successful_images": 1,
+        "total_seconds": 12.95309825008735,
+        "mean_seconds": 12.95309825008735,
+        "soft_match": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 6,
+          "n_pred": 6,
+          "n_gt": 6
+        },
+        "ged_avg_per_reaction": null
+      },
+      "gemini-3.1-pro-preview": {
+        "backend": "gemini-3.1-pro-preview",
+        "status": "completed",
+        "completed_images": 1,
+        "successful_images": 1,
+        "total_seconds": 6.5116734999464825,
+        "mean_seconds": 6.5116734999464825,
+        "soft_match": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8333333333333334,
+          "f1": 0.8333333333333334,
+          "tp": 5,
+          "n_pred": 6,
+          "n_gt": 6
+        },
+        "ged_avg_per_reaction": null
+      }
+    },
+    "balance_before_hkd": 276.568155,
+    "balance_after_hkd": 274.23291,
+    "balance_delta_hkd": 2.3352449999999862,
+    "elapsed_seconds": 127.03175966697745,
+    "cost_note": "Account balance delta; includes concurrent account activity if any. Model attribution requires usage pricing."
+  }
+}

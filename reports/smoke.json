@@ -1,0 +1,474 @@
+{
+  "models": {
+    "gemini-3.1-pro-preview": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 82.30122608295642,
+      "median_seconds": 82.30122608295642,
+      "prompt_tokens": 1323,
+      "completion_tokens": 11203,
+      "reasoning_tokens": 10807,
+      "estimated_usd": 0.137082,
+      "estimated_usd_per_image": 0.137082,
+      "estimated_usd_per_match": 0.022847000000000003,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 82.30122608295642
+        }
+      ]
+    },
+    "gemini-3.7-flash": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 12.859188291011378,
+      "median_seconds": 12.859188291011378,
+      "prompt_tokens": 1323,
+      "completion_tokens": 1924,
+      "reasoning_tokens": 1256,
+      "estimated_usd": 0.00820725,
+      "estimated_usd_per_image": 0.00820725,
+      "estimated_usd_per_match": 0.001367875,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 12.859188291011378
+        }
+      ]
+    },
+    "minimax/minimax-m3": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 45.66909487498924,
+      "median_seconds": 45.66909487498924,
+      "prompt_tokens": 2704,
+      "completion_tokens": 6112,
+      "reasoning_tokens": 5660,
+      "estimated_usd": 0.0081108,
+      "estimated_usd_per_image": 0.0081108,
+      "estimated_usd_per_match": 0.0013518,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 45.66909487498924
+        }
+      ]
+    },
+    "moonshotai/kimi-k3": {
+      "images": 1,
+      "successful_images": 0,
+      "soft_match": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "n_pred": 0,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "n_pred": 0,
+        "n_gt": 6
+      },
+      "mean_seconds": 300.94315033301245,
+      "median_seconds": 300.94315033301245,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "reasoning_tokens": 0,
+      "estimated_usd": 0.0,
+      "estimated_usd_per_image": 0.0,
+      "estimated_usd_per_match": null,
+      "invalid_smiles": 0,
+      "molecules": 0,
+      "flagged_images": 1,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": false,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 0,
+          "n_gt": 6,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 300.94315033301245
+        }
+      ]
+    },
+    "qwen-vl": {
+      "images": 1,
+      "successful_images": 0,
+      "soft_match": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "n_pred": 0,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "n_pred": 0,
+        "n_gt": 6
+      },
+      "mean_seconds": 2.637564833043143,
+      "median_seconds": 2.637564833043143,
+      "prompt_tokens": 2486,
+      "completion_tokens": 176,
+      "reasoning_tokens": 0,
+      "estimated_usd": null,
+      "estimated_usd_per_image": null,
+      "estimated_usd_per_match": null,
+      "invalid_smiles": 0,
+      "molecules": 0,
+      "flagged_images": 1,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": false,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 0,
+          "n_gt": 6,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 2.637564833043143
+        }
+      ]
+    },
+    "qwen/qwen3.8-flash": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "tp": 4,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "tp": 4,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 147.83849233295768,
+      "median_seconds": 147.83849233295768,
+      "prompt_tokens": 2032,
+      "completion_tokens": 11775,
+      "reasoning_tokens": 11272,
+      "estimated_usd": 0.00583905,
+      "estimated_usd_per_image": 0.00583905,
+      "estimated_usd_per_match": 0.0014597625,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 4,
+          "exact_tp": 4,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 147.83849233295768
+        }
+      ]
+    },
+    "saved_sol_medium": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 46.646,
+      "median_seconds": 46.646,
+      "prompt_tokens": 1521,
+      "completion_tokens": 2967,
+      "reasoning_tokens": 2560,
+      "estimated_usd": 0.032712000000000005,
+      "estimated_usd_per_image": 0.032712000000000005,
+      "estimated_usd_per_match": 0.005452000000000001,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 46.646
+        }
+      ],
+      "historical": true,
+      "date": "2026-09-21"
+    },
+    "saved_sol_medium_high_review": {
+      "images": 1,
+      "successful_images": 1,
+      "soft_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "exact_match": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "n_pred": 6,
+        "n_gt": 6
+      },
+      "mean_seconds": 78.151,
+      "median_seconds": 78.151,
+      "prompt_tokens": 6552,
+      "completion_tokens": 4987,
+      "reasoning_tokens": 4179,
+      "estimated_usd": 0.062974,
+      "estimated_usd_per_image": 0.062974,
+      "estimated_usd_per_match": 0.010495666666666667,
+      "invalid_smiles": 0,
+      "molecules": 12,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "10.1002_anie.202313578 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 78.151
+        }
+      ],
+      "historical": true,
+      "date": "2026-09-21"
+    }
+  },
+  "pricing_basis": "2026-10-01 OpenRouter catalog reference rates; HKUST actual charges can differ. Completion totals include reported reasoning tokens; failures/retries with usage are included.",
+  "baseline_note": "Saved predictions rescored on identical images with current RDKit. Baseline review latency and cost include both extraction and review.",
+  "scope": "R-group reactants and products only. Conditions not scored. Soft match strips stereochemistry and salts with threshold 0.5; exact match also strips stereochemistry and salts.",
+  "account_measurement": {
+    "scores": {
+      "qwen-vl": {
+        "backend": "qwen-vl",
+        "status": "incomplete",
+        "completed_images": 1,
+        "successful_images": 0,
+        "total_seconds": 2.637564833043143,
+        "mean_seconds": 2.637564833043143,
+        "soft_match": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "n_pred": 0,
+          "n_gt": 6
+        },
+        "ged_avg_per_reaction": null
+      },
+      "qwen/qwen3.8-flash": {
+        "backend": "qwen/qwen3.8-flash",
+        "status": "completed",
+        "completed_images": 1,
+        "successful_images": 1,
+        "total_seconds": 147.83849233295768,
+        "mean_seconds": 147.83849233295768,
+        "soft_match": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.6666666666666666,
+          "tp": 4,
+          "n_pred": 6,
+          "n_gt": 6
+        },
+        "ged_avg_per_reaction": null
+      },
+      "moonshotai/kimi-k3": {
+        "backend": "moonshotai/kimi-k3",
+        "status": "incomplete",
+        "completed_images": 1,
+        "successful_images": 0,
+        "total_seconds": 300.94315033301245,
+        "mean_seconds": 300.94315033301245,
+        "soft_match": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "n_pred": 0,
+          "n_gt": 6
+        },
+        "ged_avg_per_reaction": null
+      },
+      "minimax/minimax-m3": {
+        "backend": "minimax/minimax-m3",
+        "status": "completed",
+        "completed_images": 1,
+        "successful_images": 1,
+        "total_seconds": 45.66909487498924,
+        "mean_seconds": 45.66909487498924,
+        "soft_match": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 6,
+          "n_pred": 6,
+          "n_gt": 6
+        },
+        "ged_avg_per_reaction": null
+      },
+      "gemini-3.7-flash": {
+        "backend": "gemini-3.7-flash",
+        "status": "completed",
+        "completed_images": 1,
+        "successful_images": 1,
+        "total_seconds": 12.859188291011378,
+        "mean_seconds": 12.859188291011378,
+        "soft_match": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 6,
+          "n_pred": 6,
+          "n_gt": 6
+        },
+        "ged_avg_per_reaction": null
+      },
+      "gemini-3.1-pro-preview": {
+        "backend": "gemini-3.1-pro-preview",
+        "status": "completed",
+        "completed_images": 1,
+        "successful_images": 1,
+        "total_seconds": 82.30122608295642,
+        "mean_seconds": 82.30122608295642,
+        "soft_match": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 6,
+          "n_pred": 6,
+          "n_gt": 6
+        },
+        "ged_avg_per_reaction": null
+      }
+    },
+    "balance_before_hkd": 277.842067,
+    "balance_after_hkd": 276.568155,
+    "balance_delta_hkd": 1.2739119999999957,
+    "elapsed_seconds": 302.07432520901784,
+    "cost_note": "Account balance delta; includes concurrent account activity if any. Model attribution requires usage pricing."
+  }
+}

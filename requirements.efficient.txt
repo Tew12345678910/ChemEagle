@@ -1,0 +1,6 @@
+requests>=2.31,<3
+Pillow>=10,<12
+rdkit>=2024.3
+numpy>=1.24
+scipy>=1.10
+python-dotenv>=1,<2

@@ -1,0 +1,541 @@
+{
+  "models": {
+    "moonshotai/kimi-k3": {
+      "images": 12,
+      "successful_images": 8,
+      "soft_match": {
+        "precision": 0.4605263157894737,
+        "recall": 0.22435897435897437,
+        "f1": 0.3017241379310345,
+        "tp": 35,
+        "n_pred": 76,
+        "n_gt": 156
+      },
+      "exact_match": {
+        "precision": 0.4605263157894737,
+        "recall": 0.22435897435897437,
+        "f1": 0.3017241379310345,
+        "tp": 35,
+        "n_pred": 76,
+        "n_gt": 156
+      },
+      "mean_seconds": 186.44118409709577,
+      "median_seconds": 172.4979462500196,
+      "prompt_tokens": 18389,
+      "completion_tokens": 43614,
+      "reasoning_tokens": 32816,
+      "estimated_usd": 0.4483650072,
+      "unknown_usage_calls": 6,
+      "provider_reported_usd": 0.6118352854,
+      "provider_cost_calls": 8,
+      "estimated_usd_per_image": 0.0373637506,
+      "estimated_usd_per_match": 0.012810428777142857,
+      "invalid_smiles": 5,
+      "molecules": 222,
+      "flagged_images": 6,
+      "per_image": [
+        {
+          "image": "acs.joc.3c00760 example 2.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 4,
+          "n_gt": 3,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 124.15178716694936
+        },
+        {
+          "image": "ajoc.202200603 example 1.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 145.22145516704768
+        },
+        {
+          "image": "acs.joc.3c00999 example 1.png",
+          "ok": true,
+          "tp": 8,
+          "exact_tp": 8,
+          "n_pred": 8,
+          "n_gt": 8,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 90.32067325001117
+        },
+        {
+          "image": "ejoc.202300733 example 6.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 8,
+          "n_gt": 8,
+          "needs_review": true,
+          "invalid_smiles": 5,
+          "latency_seconds": 26.683437958010472
+        },
+        {
+          "image": "ejoc.202300707 example 1.png",
+          "ok": true,
+          "tp": 2,
+          "exact_tp": 2,
+          "n_pred": 9,
+          "n_gt": 9,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 108.73896049999166
+        },
+        {
+          "image": "acs.joc.3c00062 example 3.png",
+          "ok": false,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 0,
+          "n_gt": 12,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 300.5222083750414
+        },
+        {
+          "image": "anie.202313838 example 1.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 12,
+          "n_gt": 12,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 103.2947453330271
+        },
+        {
+          "image": "ajoc.202300436 example 1.png",
+          "ok": true,
+          "tp": 14,
+          "exact_tp": 14,
+          "n_pred": 14,
+          "n_gt": 14,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 199.7744373329915
+        },
+        {
+          "image": "ajoc.202200531 example 1.png",
+          "ok": true,
+          "tp": 11,
+          "exact_tp": 11,
+          "n_pred": 15,
+          "n_gt": 15,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 235.63335516606458
+        },
+        {
+          "image": "ejoc.202300733 example 4.png",
+          "ok": false,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 0,
+          "n_gt": 16,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 301.69869116600603
+        },
+        {
+          "image": "acs.joc.3c00760 example 1.png",
+          "ok": false,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 0,
+          "n_gt": 20,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 300.6032848750474
+        },
+        {
+          "image": "acs.orglett.2c03811 example 1.png",
+          "ok": false,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 0,
+          "n_gt": 33,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 300.65117287496105
+        }
+      ]
+    },
+    "saved_sol_medium": {
+      "images": 12,
+      "successful_images": 12,
+      "soft_match": {
+        "precision": 0.6493506493506493,
+        "recall": 0.6410256410256411,
+        "f1": 0.6451612903225807,
+        "tp": 100,
+        "n_pred": 154,
+        "n_gt": 156
+      },
+      "exact_match": {
+        "precision": 0.6493506493506493,
+        "recall": 0.6410256410256411,
+        "f1": 0.6451612903225807,
+        "tp": 100,
+        "n_pred": 154,
+        "n_gt": 156
+      },
+      "mean_seconds": 68.69866666666667,
+      "median_seconds": 70.3395,
+      "prompt_tokens": 14564,
+      "completion_tokens": 61631,
+      "reasoning_tokens": 47761,
+      "estimated_usd": 0.6454380000000001,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": null,
+      "provider_cost_calls": 0,
+      "estimated_usd_per_image": 0.05378650000000001,
+      "estimated_usd_per_match": 0.006454380000000001,
+      "invalid_smiles": 0,
+      "molecules": 438,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "acs.joc.3c00062 example 3.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 12,
+          "n_gt": 12,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 57.513
+        },
+        {
+          "image": "acs.joc.3c00760 example 1.png",
+          "ok": true,
+          "tp": 13,
+          "exact_tp": 13,
+          "n_pred": 20,
+          "n_gt": 20,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 84.47
+        },
+        {
+          "image": "acs.joc.3c00760 example 2.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 4,
+          "n_gt": 3,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 74.268
+        },
+        {
+          "image": "acs.joc.3c00999 example 1.png",
+          "ok": true,
+          "tp": 7,
+          "exact_tp": 7,
+          "n_pred": 8,
+          "n_gt": 8,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 33.006
+        },
+        {
+          "image": "acs.orglett.2c03811 example 1.png",
+          "ok": true,
+          "tp": 25,
+          "exact_tp": 25,
+          "n_pred": 30,
+          "n_gt": 33,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 114.043
+        },
+        {
+          "image": "ajoc.202200531 example 1.png",
+          "ok": true,
+          "tp": 11,
+          "exact_tp": 11,
+          "n_pred": 15,
+          "n_gt": 15,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 57.023
+        },
+        {
+          "image": "ajoc.202200603 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 66.411
+        },
+        {
+          "image": "ajoc.202300436 example 1.png",
+          "ok": true,
+          "tp": 14,
+          "exact_tp": 14,
+          "n_pred": 14,
+          "n_gt": 14,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 84.253
+        },
+        {
+          "image": "anie.202313838 example 1.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 12,
+          "n_gt": 12,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 96.479
+        },
+        {
+          "image": "ejoc.202300707 example 1.png",
+          "ok": true,
+          "tp": 9,
+          "exact_tp": 9,
+          "n_pred": 9,
+          "n_gt": 9,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 81.705
+        },
+        {
+          "image": "ejoc.202300733 example 4.png",
+          "ok": true,
+          "tp": 15,
+          "exact_tp": 15,
+          "n_pred": 16,
+          "n_gt": 16,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 55.51
+        },
+        {
+          "image": "ejoc.202300733 example 6.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 8,
+          "n_gt": 8,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 19.703
+        }
+      ],
+      "historical": true,
+      "date": "2026-09-21"
+    },
+    "saved_sol_medium_high_review": {
+      "images": 12,
+      "successful_images": 12,
+      "soft_match": {
+        "precision": 0.7662337662337663,
+        "recall": 0.7564102564102564,
+        "f1": 0.7612903225806451,
+        "tp": 118,
+        "n_pred": 154,
+        "n_gt": 156
+      },
+      "exact_match": {
+        "precision": 0.7662337662337663,
+        "recall": 0.7564102564102564,
+        "f1": 0.7612903225806451,
+        "tp": 118,
+        "n_pred": 154,
+        "n_gt": 156
+      },
+      "mean_seconds": 182.07416666666666,
+      "median_seconds": 191.62900000000002,
+      "prompt_tokens": 70313,
+      "completion_tokens": 159274,
+      "reasoning_tokens": 130699,
+      "estimated_usd": 1.733366,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": null,
+      "provider_cost_calls": 0,
+      "estimated_usd_per_image": 0.14444716666666665,
+      "estimated_usd_per_match": 0.014689542372881356,
+      "invalid_smiles": 0,
+      "molecules": 438,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "acs.joc.3c00062 example 3.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 12,
+          "n_gt": 12,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 172.677
+        },
+        {
+          "image": "acs.joc.3c00760 example 1.png",
+          "ok": true,
+          "tp": 17,
+          "exact_tp": 17,
+          "n_pred": 20,
+          "n_gt": 20,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 253.67
+        },
+        {
+          "image": "acs.joc.3c00760 example 2.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 4,
+          "n_gt": 3,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 264.781
+        },
+        {
+          "image": "acs.joc.3c00999 example 1.png",
+          "ok": true,
+          "tp": 8,
+          "exact_tp": 8,
+          "n_pred": 8,
+          "n_gt": 8,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 124.641
+        },
+        {
+          "image": "acs.orglett.2c03811 example 1.png",
+          "ok": true,
+          "tp": 25,
+          "exact_tp": 25,
+          "n_pred": 30,
+          "n_gt": 33,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 289.496
+        },
+        {
+          "image": "ajoc.202200531 example 1.png",
+          "ok": true,
+          "tp": 12,
+          "exact_tp": 12,
+          "n_pred": 15,
+          "n_gt": 15,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 149.07500000000002
+        },
+        {
+          "image": "ajoc.202200603 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 153.001
+        },
+        {
+          "image": "ajoc.202300436 example 1.png",
+          "ok": true,
+          "tp": 14,
+          "exact_tp": 14,
+          "n_pred": 14,
+          "n_gt": 14,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 216.21699999999998
+        },
+        {
+          "image": "anie.202313838 example 1.png",
+          "ok": true,
+          "tp": 12,
+          "exact_tp": 12,
+          "n_pred": 12,
+          "n_gt": 12,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 210.58100000000002
+        },
+        {
+          "image": "ejoc.202300707 example 1.png",
+          "ok": true,
+          "tp": 9,
+          "exact_tp": 9,
+          "n_pred": 9,
+          "n_gt": 9,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 211.808
+        },
+        {
+          "image": "ejoc.202300733 example 4.png",
+          "ok": true,
+          "tp": 15,
+          "exact_tp": 15,
+          "n_pred": 16,
+          "n_gt": 16,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 104.58699999999999
+        },
+        {
+          "image": "ejoc.202300733 example 6.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 8,
+          "n_gt": 8,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 34.356
+        }
+      ],
+      "historical": true,
+      "date": "2026-09-21"
+    }
+  },
+  "pricing_basis": "2026-10-01 OpenRouter catalog reference rates; HKUST actual charges can differ. Completion totals include reported reasoning tokens; failures/retries with usage are included.",
+  "baseline_note": "Saved predictions rescored on identical images with current RDKit. Baseline review latency and cost include both extraction and review.",
+  "scope": "R-group reactants and products only. Conditions not scored. Soft match strips stereochemistry and salts with threshold 0.5; exact match also strips stereochemistry and salts.",
+  "account_measurement": {
+    "scores": {
+      "moonshotai/kimi-k3": {
+        "backend": "moonshotai/kimi-k3",
+        "status": "incomplete",
+        "completed_images": 12,
+        "successful_images": 8,
+        "total_seconds": 2237.2942091651494,
+        "mean_seconds": 186.44118409709577,
+        "soft_match": {
+          "precision": 0.4605263157894737,
+          "recall": 0.22435897435897437,
+          "f1": 0.3017241379310345,
+          "tp": 35,
+          "n_pred": 76,
+          "n_gt": 156
+        },
+        "ged_avg_per_reaction": null
+      }
+    },
+    "balance_before_hkd": 252.28213,
+    "balance_after_hkd": 208.380348,
+    "balance_delta_hkd": 43.901782,
+    "elapsed_seconds": 604.9864037500229,
+    "cost_note": "Account balance delta; includes concurrent account activity if any. Model attribution requires usage pricing."
+  }
+}

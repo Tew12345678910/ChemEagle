@@ -1,0 +1,7 @@
+{
+  "date": "2026-10-01",
+  "before_hkd": 277.842067,
+  "after_hkd": 168.917876,
+  "observed_delta_hkd": 108.92419099999998,
+  "note": "Account-wide observed delta across all probes, retries, full runs and cache smoke; concurrent outside activity and late billing can affect this figure."
+}

@@ -1,0 +1,726 @@
+{
+  "models": {
+    "gemini-3.1-pro-preview": {
+      "images": 12,
+      "successful_images": 5,
+      "soft_match": {
+        "precision": 0.4,
+        "recall": 0.1282051282051282,
+        "f1": 0.1941747572815534,
+        "tp": 20,
+        "n_pred": 50,
+        "n_gt": 156
+      },
+      "exact_match": {
+        "precision": 0.4,
+        "recall": 0.1282051282051282,
+        "f1": 0.1941747572815534,
+        "tp": 20,
+        "n_pred": 50,
+        "n_gt": 156
+      },
+      "mean_seconds": 106.24950031591773,
+      "median_seconds": 117.02144768752623,
+      "prompt_tokens": 22636,
+      "completion_tokens": 255763,
+      "reasoning_tokens": 241812,
+      "estimated_usd": 3.1144280000000006,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": null,
+      "provider_cost_calls": 0,
+      "estimated_usd_per_image": 0.2595356666666667,
+      "estimated_usd_per_match": 0.15572140000000004,
+      "invalid_smiles": 0,
+      "molecules": 162,
+      "flagged_images": 7,
+      "per_image": [
+        {
+          "image": "acs.joc.3c00760 example 2.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 5,
+          "n_gt": 3,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 127.04893358401023
+        },
+        {
+          "image": "ajoc.202200603 example 1.png",
+          "ok": false,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 0,
+          "n_gt": 6,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 121.7855620830087
+        },
+        {
+          "image": "acs.joc.3c00999 example 1.png",
+          "ok": false,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 0,
+          "n_gt": 8,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 110.4708254999714
+        },
+        {
+          "image": "ejoc.202300733 example 6.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 8,
+          "n_gt": 8,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 33.60169833304826
+        },
+        {
+          "image": "ejoc.202300707 example 1.png",
+          "ok": true,
+          "tp": 9,
+          "exact_tp": 9,
+          "n_pred": 9,
+          "n_gt": 9,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 118.83955170901027
+        },
+        {
+          "image": "acs.joc.3c00062 example 3.png",
+          "ok": true,
+          "tp": 11,
+          "exact_tp": 11,
+          "n_pred": 12,
+          "n_gt": 12,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 104.43032050004695
+        },
+        {
+          "image": "anie.202313838 example 1.png",
+          "ok": false,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 0,
+          "n_gt": 12,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 115.2033436660422
+        },
+        {
+          "image": "ajoc.202300436 example 1.png",
+          "ok": false,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 0,
+          "n_gt": 14,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 123.42713804193772
+        },
+        {
+          "image": "ajoc.202200531 example 1.png",
+          "ok": false,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 0,
+          "n_gt": 15,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 108.40715687500779
+        },
+        {
+          "image": "ejoc.202300733 example 4.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 16,
+          "n_gt": 16,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 53.93264608294703
+        },
+        {
+          "image": "acs.joc.3c00760 example 1.png",
+          "ok": false,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 0,
+          "n_gt": 20,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 121.19941825000569
+        },
+        {
+          "image": "acs.orglett.2c03811 example 1.png",
+          "ok": false,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 0,
+          "n_gt": 33,
+          "needs_review": true,
+          "invalid_smiles": 0,
+          "latency_seconds": 136.64740916597657
+        }
+      ]
+    },
+    "gemini-3.7-flash": {
+      "images": 12,
+      "successful_images": 12,
+      "soft_match": {
+        "precision": 0.7911392405063291,
+        "recall": 0.8012820512820513,
+        "f1": 0.7961783439490445,
+        "tp": 125,
+        "n_pred": 158,
+        "n_gt": 156
+      },
+      "exact_match": {
+        "precision": 0.7911392405063291,
+        "recall": 0.8012820512820513,
+        "f1": 0.7961783439490445,
+        "tp": 125,
+        "n_pred": 158,
+        "n_gt": 156
+      },
+      "mean_seconds": 33.78096086809334,
+      "median_seconds": 34.820615875010844,
+      "prompt_tokens": 15961,
+      "completion_tokens": 64840,
+      "reasoning_tokens": 45600,
+      "estimated_usd": 0.25512075,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": null,
+      "provider_cost_calls": 0,
+      "estimated_usd_per_image": 0.0212600625,
+      "estimated_usd_per_match": 0.002040966,
+      "invalid_smiles": 13,
+      "molecules": 447,
+      "flagged_images": 1,
+      "per_image": [
+        {
+          "image": "acs.joc.3c00760 example 2.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 5,
+          "n_gt": 3,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 31.656026459066197
+        },
+        {
+          "image": "ajoc.202200603 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 36.305886000045575
+        },
+        {
+          "image": "acs.joc.3c00999 example 1.png",
+          "ok": true,
+          "tp": 8,
+          "exact_tp": 8,
+          "n_pred": 8,
+          "n_gt": 8,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 15.605057208100334
+        },
+        {
+          "image": "ejoc.202300733 example 6.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 8,
+          "n_gt": 8,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 11.18284149991814
+        },
+        {
+          "image": "ejoc.202300707 example 1.png",
+          "ok": true,
+          "tp": 8,
+          "exact_tp": 8,
+          "n_pred": 9,
+          "n_gt": 9,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 28.3627470000647
+        },
+        {
+          "image": "acs.joc.3c00062 example 3.png",
+          "ok": true,
+          "tp": 12,
+          "exact_tp": 12,
+          "n_pred": 12,
+          "n_gt": 12,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 33.33534574997611
+        },
+        {
+          "image": "anie.202313838 example 1.png",
+          "ok": true,
+          "tp": 12,
+          "exact_tp": 12,
+          "n_pred": 12,
+          "n_gt": 12,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 55.319473999901675
+        },
+        {
+          "image": "ajoc.202300436 example 1.png",
+          "ok": true,
+          "tp": 14,
+          "exact_tp": 14,
+          "n_pred": 14,
+          "n_gt": 14,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 40.3086902910145
+        },
+        {
+          "image": "ajoc.202200531 example 1.png",
+          "ok": true,
+          "tp": 13,
+          "exact_tp": 13,
+          "n_pred": 15,
+          "n_gt": 15,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 36.47671487508342
+        },
+        {
+          "image": "ejoc.202300733 example 4.png",
+          "ok": true,
+          "tp": 3,
+          "exact_tp": 3,
+          "n_pred": 16,
+          "n_gt": 16,
+          "needs_review": true,
+          "invalid_smiles": 13,
+          "latency_seconds": 20.187495584017597
+        },
+        {
+          "image": "acs.joc.3c00760 example 1.png",
+          "ok": true,
+          "tp": 19,
+          "exact_tp": 19,
+          "n_pred": 20,
+          "n_gt": 20,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 37.05487174994778
+        },
+        {
+          "image": "acs.orglett.2c03811 example 1.png",
+          "ok": true,
+          "tp": 30,
+          "exact_tp": 30,
+          "n_pred": 33,
+          "n_gt": 33,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 59.576379999984056
+        }
+      ]
+    },
+    "saved_sol_medium": {
+      "images": 12,
+      "successful_images": 12,
+      "soft_match": {
+        "precision": 0.6493506493506493,
+        "recall": 0.6410256410256411,
+        "f1": 0.6451612903225807,
+        "tp": 100,
+        "n_pred": 154,
+        "n_gt": 156
+      },
+      "exact_match": {
+        "precision": 0.6493506493506493,
+        "recall": 0.6410256410256411,
+        "f1": 0.6451612903225807,
+        "tp": 100,
+        "n_pred": 154,
+        "n_gt": 156
+      },
+      "mean_seconds": 68.69866666666667,
+      "median_seconds": 70.3395,
+      "prompt_tokens": 14564,
+      "completion_tokens": 61631,
+      "reasoning_tokens": 47761,
+      "estimated_usd": 0.6454380000000001,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": null,
+      "provider_cost_calls": 0,
+      "estimated_usd_per_image": 0.05378650000000001,
+      "estimated_usd_per_match": 0.006454380000000001,
+      "invalid_smiles": 0,
+      "molecules": 438,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "acs.joc.3c00062 example 3.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 12,
+          "n_gt": 12,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 57.513
+        },
+        {
+          "image": "acs.joc.3c00760 example 1.png",
+          "ok": true,
+          "tp": 13,
+          "exact_tp": 13,
+          "n_pred": 20,
+          "n_gt": 20,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 84.47
+        },
+        {
+          "image": "acs.joc.3c00760 example 2.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 4,
+          "n_gt": 3,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 74.268
+        },
+        {
+          "image": "acs.joc.3c00999 example 1.png",
+          "ok": true,
+          "tp": 7,
+          "exact_tp": 7,
+          "n_pred": 8,
+          "n_gt": 8,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 33.006
+        },
+        {
+          "image": "acs.orglett.2c03811 example 1.png",
+          "ok": true,
+          "tp": 25,
+          "exact_tp": 25,
+          "n_pred": 30,
+          "n_gt": 33,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 114.043
+        },
+        {
+          "image": "ajoc.202200531 example 1.png",
+          "ok": true,
+          "tp": 11,
+          "exact_tp": 11,
+          "n_pred": 15,
+          "n_gt": 15,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 57.023
+        },
+        {
+          "image": "ajoc.202200603 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 66.411
+        },
+        {
+          "image": "ajoc.202300436 example 1.png",
+          "ok": true,
+          "tp": 14,
+          "exact_tp": 14,
+          "n_pred": 14,
+          "n_gt": 14,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 84.253
+        },
+        {
+          "image": "anie.202313838 example 1.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 12,
+          "n_gt": 12,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 96.479
+        },
+        {
+          "image": "ejoc.202300707 example 1.png",
+          "ok": true,
+          "tp": 9,
+          "exact_tp": 9,
+          "n_pred": 9,
+          "n_gt": 9,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 81.705
+        },
+        {
+          "image": "ejoc.202300733 example 4.png",
+          "ok": true,
+          "tp": 15,
+          "exact_tp": 15,
+          "n_pred": 16,
+          "n_gt": 16,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 55.51
+        },
+        {
+          "image": "ejoc.202300733 example 6.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 8,
+          "n_gt": 8,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 19.703
+        }
+      ],
+      "historical": true,
+      "date": "2026-09-21"
+    },
+    "saved_sol_medium_high_review": {
+      "images": 12,
+      "successful_images": 12,
+      "soft_match": {
+        "precision": 0.7662337662337663,
+        "recall": 0.7564102564102564,
+        "f1": 0.7612903225806451,
+        "tp": 118,
+        "n_pred": 154,
+        "n_gt": 156
+      },
+      "exact_match": {
+        "precision": 0.7662337662337663,
+        "recall": 0.7564102564102564,
+        "f1": 0.7612903225806451,
+        "tp": 118,
+        "n_pred": 154,
+        "n_gt": 156
+      },
+      "mean_seconds": 182.07416666666666,
+      "median_seconds": 191.62900000000002,
+      "prompt_tokens": 70313,
+      "completion_tokens": 159274,
+      "reasoning_tokens": 130699,
+      "estimated_usd": 1.733366,
+      "unknown_usage_calls": 0,
+      "provider_reported_usd": null,
+      "provider_cost_calls": 0,
+      "estimated_usd_per_image": 0.14444716666666665,
+      "estimated_usd_per_match": 0.014689542372881356,
+      "invalid_smiles": 0,
+      "molecules": 438,
+      "flagged_images": 0,
+      "per_image": [
+        {
+          "image": "acs.joc.3c00062 example 3.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 12,
+          "n_gt": 12,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 172.677
+        },
+        {
+          "image": "acs.joc.3c00760 example 1.png",
+          "ok": true,
+          "tp": 17,
+          "exact_tp": 17,
+          "n_pred": 20,
+          "n_gt": 20,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 253.67
+        },
+        {
+          "image": "acs.joc.3c00760 example 2.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 4,
+          "n_gt": 3,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 264.781
+        },
+        {
+          "image": "acs.joc.3c00999 example 1.png",
+          "ok": true,
+          "tp": 8,
+          "exact_tp": 8,
+          "n_pred": 8,
+          "n_gt": 8,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 124.641
+        },
+        {
+          "image": "acs.orglett.2c03811 example 1.png",
+          "ok": true,
+          "tp": 25,
+          "exact_tp": 25,
+          "n_pred": 30,
+          "n_gt": 33,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 289.496
+        },
+        {
+          "image": "ajoc.202200531 example 1.png",
+          "ok": true,
+          "tp": 12,
+          "exact_tp": 12,
+          "n_pred": 15,
+          "n_gt": 15,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 149.07500000000002
+        },
+        {
+          "image": "ajoc.202200603 example 1.png",
+          "ok": true,
+          "tp": 6,
+          "exact_tp": 6,
+          "n_pred": 6,
+          "n_gt": 6,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 153.001
+        },
+        {
+          "image": "ajoc.202300436 example 1.png",
+          "ok": true,
+          "tp": 14,
+          "exact_tp": 14,
+          "n_pred": 14,
+          "n_gt": 14,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 216.21699999999998
+        },
+        {
+          "image": "anie.202313838 example 1.png",
+          "ok": true,
+          "tp": 12,
+          "exact_tp": 12,
+          "n_pred": 12,
+          "n_gt": 12,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 210.58100000000002
+        },
+        {
+          "image": "ejoc.202300707 example 1.png",
+          "ok": true,
+          "tp": 9,
+          "exact_tp": 9,
+          "n_pred": 9,
+          "n_gt": 9,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 211.808
+        },
+        {
+          "image": "ejoc.202300733 example 4.png",
+          "ok": true,
+          "tp": 15,
+          "exact_tp": 15,
+          "n_pred": 16,
+          "n_gt": 16,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 104.58699999999999
+        },
+        {
+          "image": "ejoc.202300733 example 6.png",
+          "ok": true,
+          "tp": 0,
+          "exact_tp": 0,
+          "n_pred": 8,
+          "n_gt": 8,
+          "needs_review": false,
+          "invalid_smiles": 0,
+          "latency_seconds": 34.356
+        }
+      ],
+      "historical": true,
+      "date": "2026-09-21"
+    }
+  },
+  "pricing_basis": "2026-10-01 OpenRouter catalog reference rates; HKUST actual charges can differ. Completion totals include reported reasoning tokens; failures/retries with usage are included.",
+  "baseline_note": "Saved predictions rescored on identical images with current RDKit. Baseline review latency and cost include both extraction and review.",
+  "scope": "R-group reactants and products only. Conditions not scored. Soft match strips stereochemistry and salts with threshold 0.5; exact match also strips stereochemistry and salts.",
+  "account_measurement": {
+    "scores": {
+      "gemini-3.7-flash": {
+        "backend": "gemini-3.7-flash",
+        "status": "completed",
+        "completed_images": 12,
+        "successful_images": 12,
+        "total_seconds": 405.3715304171201,
+        "mean_seconds": 33.78096086809334,
+        "soft_match": {
+          "precision": 0.7911392405063291,
+          "recall": 0.8012820512820513,
+          "f1": 0.7961783439490445,
+          "tp": 125,
+          "n_pred": 158,
+          "n_gt": 156
+        },
+        "ged_avg_per_reaction": null
+      },
+      "gemini-3.1-pro-preview": {
+        "backend": "gemini-3.1-pro-preview",
+        "status": "incomplete",
+        "completed_images": 12,
+        "successful_images": 5,
+        "total_seconds": 1274.9940037910128,
+        "mean_seconds": 106.24950031591773,
+        "soft_match": {
+          "precision": 0.4,
+          "recall": 0.1282051282051282,
+          "f1": 0.1941747572815534,
+          "tp": 20,
+          "n_pred": 50,
+          "n_gt": 156
+        },
+        "ged_avg_per_reaction": null
+      }
+    },
+    "balance_before_hkd": 232.120544,
+    "balance_after_hkd": 193.260982,
+    "balance_delta_hkd": 38.85956199999998,
+    "elapsed_seconds": 507.8121679580072,
+    "cost_note": "Account balance delta; includes concurrent account activity if any. Model attribution requires usage pricing."
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "data": [
+    {
+      "id": "gpt-4.1-mini",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 1047576,
+      "max_output_tokens": 32768
+    },
+    {
+      "id": "gpt-4o",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 128000,
+      "max_output_tokens": 16384
+    },
+    {
+      "id": "gpt-5-mini",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 272000,
+      "max_output_tokens": 128000
+    },
+    {
+      "id": "o4-mini",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 200000,
+      "max_output_tokens": 100000
+    },
+    {
+      "id": "text-embedding-3-small",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "embedding",
+      "max_input_tokens": 8191
+    },
+    {
+      "id": "text-embedding-3-large",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "embedding",
+      "max_input_tokens": 8191
+    },
+    {
+      "id": "gpt-5-nano",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 272000,
+      "max_output_tokens": 128000
+    },
+    {
+      "id": "text-embedding-ada-002",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "embedding",
+      "max_input_tokens": 8191
+    },
+    {
+      "id": "o3-mini",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 200000,
+      "max_output_tokens": 100000
+    },
+    {
+      "id": "gemini-2.5-flash",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 1048576,
+      "max_output_tokens": 65535
+    },
+    {
+      "id": "gemini-2.5-flash-lite",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 1048576,
+      "max_output_tokens": 65535
+    },
+    {
+      "id": "gemini-3-flash-preview",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 1048576,
+      "max_output_tokens": 65535
+    },
+    {
+      "id": "gemini-2.5-flash-image",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "image_generation",
+      "max_input_tokens": 32768,
+      "max_output_tokens": 32768
+    },
+    {
+      "id": "gemini-3.1-pro-preview",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 1048576,
+      "max_output_tokens": 65536
+    },
+    {
+      "id": "gpt-5.6-terra",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 922000,
+      "max_output_tokens": 128000
+    },
+    {
+      "id": "gemini-3.6-flash",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 1048576,
+      "max_output_tokens": 65536
+    },
+    {
+      "id": "gemini-3.7-flash",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 1048576,
+      "max_output_tokens": 65536
+    },
+    {
+      "id": "gpt-5.6-sol",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 922000,
+      "max_output_tokens": 128000
+    },
+    {
+      "id": "gpt-5.6-luna",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 922000,
+      "max_output_tokens": 128000
+    },
+    {
+      "id": "moonshotai/kimi-k3",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "z-ai/glm-5.3",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "z-ai/glm-5.3-flash",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro-0813",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 393216
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 393216
+    },
+    {
+      "id": "minimax/minimax-m3",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 128000
+    },
+    {
+      "id": "qwen/qwen3.8-flash",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "qwen/qwen3.8-max",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "gpt-4o-mini",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai",
+      "mode": "chat",
+      "max_input_tokens": 128000,
+      "max_output_tokens": 16384
+    },
+    {
+      "id": "deepseek-r1-distill",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "qwen3-32b",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "llama33-70b",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "qwen-vl",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "InvestLM2-32B",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "bge-m3",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "e5-mistral",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "multilingual-e5-large",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "bge-reranker-v2-m3",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    }
+  ],
+  "object": "list"
+}

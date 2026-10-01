@@ -1,3 +1,49 @@
+## ChemEAGLE Lite experiment
+
+This branch adds a lightweight extractor in `efficient.py`. It sends one image
+to one HKUST vision model, validates SMILES with RDKit, and optionally caches
+clean predictions. It runs without CUDA, PyTorch, or specialist checkpoints.
+Its task is the existing GT4 R-group benchmark: detailed reactants and products.
+Conditions, PDF screening, and the other full ChemEAGLE agents are outside this
+experiment. The original pipeline remains available below.
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.efficient.txt
+# Set HKUST_API_KEY privately in your environment.
+.venv/bin/python efficient.py examples/reaction1.jpg --output result.json --cache .cache --review
+```
+
+The default model is `gemini-3.7-flash` with its normal reasoning setting.
+`--review` requests Sol high reasoning only for locally flagged outputs. It
+retains the draft when a review fails, changes row count or identity, or increases
+invalid SMILES, unresolved placeholders, or duplicate rows. Omit `--review` for
+the measured single-pass mode. The result includes predictions, usage, latency,
+and a local `needs_review` flag.
+Invalid SMILES are retained and flagged rather than silently dropped. Valid
+SMILES do not prove that a molecular graph matches the drawing. Failed or
+truncated responses are never cached. Cache keys include the original image,
+prompt, model, image resolution, and reasoning configuration. Identical repeated
+requests can reuse a clean result without another paid model call.
+
+See [the benchmark report](reports/cost_optimization_2026-10-01.md) for measured
+tradeoffs and limitations. Reproduce the comparison with:
+
+```sh
+.venv/bin/python benchmarks/run_efficient.py \
+  --input-dir /path/to/r_group_resolution_diagrams \
+  --env-file /path/to/private/.env.local \
+  --output-dir benchmark-runs/comparison \
+  --models minimax/minimax-m3 moonshotai/kimi-k3 gemini-3.7-flash gemini-3.1-pro-preview \
+  --reasoning economical --workers 4 --max-spend-hkd 40
+```
+
+Only images and the extraction prompt are sent to HKUST. Ground truth is used
+locally for scoring. Successful runs can be resumed; changing settings requires
+a new output directory. A spend checkpoint runs between bounded request batches;
+an in-flight batch can exceed that checkpoint by its own cost. Account balance
+deltas also include any other concurrent activity on that HKUST account.
+
 <div align="center">
   <img src="examples/chemeagle_logo2.png" width="250" alt="ChemEAGLE Logo">
   <h1>ChemEAGLE</h1>
@@ -347,5 +393,3 @@ The input can be any chemical graphics; feel free to try more examples!
 ## :warning: Acknowledgement
 1. We use api_version="2024-10-21" with the HKUST Azure OpenAI endpoint as our official closed-source version.
 2. Our code is based on [MolNexTR](https://github.com/CYF2000127/MolNexTR), [MolScribe](https://github.com/thomas0809/MolScribe), [RxnIM](https://github.com/CYF2000127/RxnIM), [RxnScribe](https://github.com/thomas0809/RxNScribe), [ChemNER](https://github.com/Ozymandias314/ChemIENER), [ChemRxnExtractor](https://github.com/jiangfeng1124/ChemRxnExtractor), [AutoAgents](https://github.com/Link-AGI/AutoAgents), and [Azure OpenAI](https://azure.microsoft.com/).
-
-

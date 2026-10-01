@@ -1,0 +1,8 @@
+{
+  "same_result": true,
+  "first_request_count": 1,
+  "second_request_count": 0,
+  "cache_hit": true,
+  "first_wall_seconds": 9.379503709031269,
+  "second_wall_seconds": 0.0
+}
