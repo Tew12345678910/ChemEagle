@@ -1,13 +1,29 @@
-# ChemEAGLE cost optimization — 1 October 2026
+# ChemEAGLE: cost and quality comparison
 
-The recommended variant is Gemini 3.7 Flash with normal reasoning, followed by
-Sol high visual review only when local validation flags an image. On the current
-73-image GT4 benchmark it reached **F1 0.820 and exact F1
-0.818**, versus the saved two-pass baseline's
-0.815 and 0.804.
-Its reference token cost was **79.0% lower**, and average per-image
-latency was **4.00 times lower**. These are measurements from one run;
-the small accuracy difference does not establish statistical superiority.
+**Decision report | 1 October 2026 | HKUST API | 73 images / 893 ground-truth reactions**
+
+## Recommendation
+
+Use Gemini 3.7 Flash with default reasoning and selective GPT-5.6 Sol high review. The optimized variant preserves benchmark quality while substantially reducing estimated token cost and observed latency. The cheapest open-weight candidates were much less accurate when asked to convert chemistry images directly into SMILES.
+
+## Comparison with current ChemEagle
+
+The reference is the saved ChemEagle Sol medium extraction plus Sol high review run from 21 September. It is the strongest saved two-pass baseline evaluated here. It was rescored with the same current evaluator as the new runs; the original pipeline was not rerun live. A separate upgraded local checkout already defaults to Gemini 3.7 Flash, so these findings compare a specific recorded pipeline, not every ChemEagle configuration.
+
+| Metric | Saved ChemEagle baseline | Cost-optimized ChemEagle | Change |
+|---|---:|---:|---:|
+| Benchmark F1 | 0.8150 | 0.8199 | +0.0048 |
+| Exact F1 | 0.8038 | 0.8176 | +0.0138 |
+| Successful images | 73/73 | 73/73 | Same |
+| Mean seconds per image | 157.8 | 39.4 | 75.0% lower |
+| Reference token cost per 73 images | USD 9.159 | USD 1.926 | 79.0% lower |
+| Reference token cost per image | USD 0.1255 | USD 0.0264 | Same pricing basis |
+| Model calls | 146 | 78 | 46.6% fewer |
+| Invalid SMILES | 6 | 0 | Syntax validity improved |
+
+The small F1 improvement is not proof of superiority: this is a single benchmark run, and the review policy was developed on a 12-image subset reused in the full corpus. Treat the result as evidence of comparable quality at lower cost. F1 is a precision/recall measure, not the percentage of completely correct images.
+
+At the same measured usage and reference rates, 1,000 similar images would cost approximately USD 125.47 for the baseline versus USD 26.39 for the optimized variant, saving USD 99.08. This is a linear illustration, not an HKUST quote; image complexity, retries and review frequency can change it.
 
 ## Full benchmark
 
@@ -57,7 +73,7 @@ CPU without specialist checkpoints or PyTorch/CUDA.
 | Gemini Pro 3.1, default reasoning, 32k cap | 11/12 | 0.456 | 0.456 | 145.6 | $2.890 |
 | Kimi K3, low reasoning, 16k cap | 8/12 | 0.302 | 0.302 | 186.4 | $0.448 |
 
-These rows use the same separate 12-image probe, covering scopes with 3–33
+These rows use the same separate 12-image probe, covering scopes with 3-33
 reactions, and its 156 ground-truth reactions. Gemini Pro's 16k budget was often
 consumed by reasoning, producing truncated or invalid JSON. Raising its budget
 to 32k improved completion reliability but remained expensive and weaker on
@@ -103,7 +119,7 @@ The upgraded local ChemEagle checkout already defaults to `gemini-3.7-flash`,
 which informed that candidate. Yufan's email has **not been verified**: the HKUST
 mailbox requires user sign-in in the in-app browser. No email was sent.
 
-## Use the branch
+## Implementation and reproduction
 
 Branch: `mathus/chemeagle-cost-optimized`. The original dirty checkout was
 preserved; this work is isolated in `ChemEagle-efficient`.
@@ -125,3 +141,29 @@ The score JSONs, `comparison.csv`, runtime versions, dataset manifest and
 per-image prediction artifacts accompany this report. `benchmarks/run_efficient.py`
 repeats the API runs; `benchmarks/report_efficient.py` repeats the scoring;
 `benchmarks/review_flagged.py` repeats selective review.
+
+
+
+## API provenance and model availability
+
+All live inference requests in this experiment used the HKUST API, at `https://hkust.azure-api.net/hkust-genai/v1/chat/completions`. OpenRouter was used only as a public reference pricing catalog; the experiment did not send inference requests directly to OpenRouter.
+
+The Sol baseline and selective reviewer use `gpt-5.6-sol`. The HKUST model catalog checked on 1 October did not list GPT-6 Sol or GPT-6.1 Sol. They were not benchmarked, and selecting either in Codex or signing into ChatGPT does not demonstrate access through HKUST. No conclusion about their chemistry quality or cost follows from this study.
+
+## Deployment decision
+
+Keep the optimized variant opt-in while validating it on an independent held-out dataset, particularly stereochemistry and salts. Use the Gemini default-reasoning single pass only when its modest quality reduction is acceptable. Do not replace the baseline with the tested Kimi, Qwen or MiniMax direct-conversion configurations on the basis of their low price alone.
+
+The original pipeline remains available on this branch. Clean extraction results can be cached; live smoke verification showed zero API calls on the second identical request. Failed, truncated or flagged results do not enter the clean cache. The branch is `mathus/chemeagle-cost-optimized` in [Tew12345678910/ChemEagle](https://github.com/Tew12345678910/ChemEagle/tree/mathus/chemeagle-cost-optimized).
+
+## Evidence files
+
+- `reports/comparison.csv`: full-corpus comparison, including invalid SMILES counts.
+- `reports/selective-review.json`: optimized profile scores and usage.
+- `reports/predictions/`: per-image predictions for independent inspection.
+- `reports/dataset_manifest.json`: benchmark image inventory and hashes.
+- `reports/hkust_model_catalog_2026-10-01.json`: available HKUST models.
+- `reports/openrouter_catalog_2026-10-01.json`: common pricing snapshot.
+- `reports/account_balance.json` and `reports/cache_smoke.json`: account observation and live cache check.
+
+The Markdown and PDF versions contain the same report. Ten focused implementation tests passed in the completed benchmark work; no additional inference spend was needed to prepare this report.
